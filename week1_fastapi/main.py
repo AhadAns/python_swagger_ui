@@ -1,9 +1,9 @@
 from fastapi import FastAPI, status, HTTPException, Request, Depends
 from fastapi.responses import JSONResponse
-from models import CreateUserRequest, UserResponse, UpdateUserResponse, BusinessException, TableInfo, TableListResponse, QueryResponse
+from week1_fastapi.models import CreateUserRequest, UserResponse, UpdateUserResponse, BusinessException, TableInfo, TableListResponse, QueryResponse
 
 from contextlib import asynccontextmanager
-from database import init_db, close_db, get_db, get_raw_connection
+from week1_fastapi.database import init_db, close_db, get_db, get_raw_connection
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
